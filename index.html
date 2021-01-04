@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <title>Mi librería online</title>
+</head>
+
+<body class="custom-scroll-bar">
+    <!-- Main Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-md">
+            <!-- Flex Box Row 1 -->
+            <div id="navbar-row-1">
+                <!-- Logo -->
+                <div id="navbar-logo" class="navbar-row-item">
+                    <a class="navbar-brand header-item" href="index.html"><img id="imgLogo" src="img/logo_small.png"
+                             alt="Logo"></a>
+                </div>
+
+                <!-- Search Form -->
+                <div id="navbar-search-form" class="navbar-row-item">
+                    <form id="navbarSearchFrom" name="navbarSearchFrom"
+                          class="form-inline my-2 my-lg-0 navbar-form" novalidate>
+                        <div class="w-100">
+                            <div class="input-group input-group-search w-100 text-left">
+                                <input type="search" class="form-control" placeholder="Search..." required>
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary btn-navbar-search-field" type="button"
+                                            id="search-button-addon">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                    <a href="search.html" class="btn btn-secondary btn-navbar-search-field"
+                                       type="button"
+                                       id="search-button-addon">
+                                        Búsqueda avanzada
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- /.w-100 -->
+                    </form>
+                </div><!-- /#navbar-search-form -->
+
+                <!-- Nav Row 1 Links -->
+                <div id="navbar-row-1-links" class="navbar-row-item">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link"
+                               title="Identifícate">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown d-none">
+                            <!-- Necesita padding al mostrar el toggle -->
+                            <a class="nav-link dropdown-toggle" href="#/about/" id="dropdown01"
+                               data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">User name <span
+                                      class="sr-only">(current)&gt;</span>
+                            </a>
+                            <!-- position:absolute al mostrar el toggle -->
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
+                                <a class="dropdown-item" href="#/user/perfil">Perfil</a>
+                                <a class="dropdown-item" href="#/user/pedidos">Mis pedidos</a>
+                                <a class="dropdown-item" href="#/logout">Cerrar sesión</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a id="cartLink" class="nav-link" href="#">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class="badge badge-cart-count">5</span>
+                            </a>
+
+                        </li>
+                    </ul><!-- /.navbar-nav (#navbar-row1-links)-->
+
+                    <!-- Navbar Toggler -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div><!-- /#navbar-row1-links -->
+
+            </div><!-- /#navbar-row-1 -->
+            <div id="navbar-row-2">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="#">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="#">Nuevos lanzamientos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="#">Bestsellers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre nosotros</a>
+                        </li>
+
+                        <!-- / dropdown link -->
+                    </ul>
+                </div>
+            </div><!-- /#navbar-row-2 -->
+        </div>
+    </nav>
+
+    <!-- Main Container  -->
+    <main id="main-container" class="container-md">
+        <!-- Recomendaciones -->
+        <section id="cardRecomendaciones" class="card showcase">
+            <h3 class="card-header">
+                <i class="fas fa-book"></i> Recomendaciones
+            </h3>
+            <div class="card-body">
+                <div id="carouselRecomendaciones" class="carousel slide" data-interval="false" data-ride="carousel"
+                     data-visible-slides="4">
+                    <div class="carousel-inner row w-100 mx-auto">
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="La sombra del viento"
+                                             src="img/book1.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>10%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">La sombra del viento</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Carlos Ruiz Zafón
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="El juego del ángel"
+                                             src="img/book2.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>20%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">El juego del ángel</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Carlos Ruiz Zafón
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="El prisionero del cielo"
+                                             src="img/book3.jpg">
+                                        <!-- <div class="savings-tag">
+                                            Ahorra<br>30%
+                                        </div> -->
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">El prisionero del cielo</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Carlos Ruiz Zafón
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            <!-- &nbsp;<span class="rrp">40,50 €</span> -->
+                                        </p>
+                                        <!-- <p class="price-save">
+                                            Ahorra 5,27 €</p> -->
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="El laberinto de los espíritus"
+                                             src="img/book4.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>40%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">El laberinto de los espíritus</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Carlos Ruiz Zafón
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="El príncipe de la niebla"
+                                             src="img/book5.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>50%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">El príncipe de la niebla</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Carlos Ruiz Zafón
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Marina"
+                                             src="img/book6.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>60%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Marina</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Carlos Ruiz Zafón
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+                    </div><!-- /.carousel-inner -->
+
+                    <!-- Controles -->
+                    <a class="carousel-control-prev xd-none" href="#carouselRecomendaciones" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next xd-none" href="#carouselRecomendaciones" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div><!-- /#carouselRecomendaciones.carousel.slide-->
+            </div><!-- /card-body -->
+        </section><!-- /#cardRecomendaciones.card.showcase-->
+
+        <!-- Bestsellers -->
+        <section id="cardBestsellers" class="card showcase">
+            <h3 class="card-header">
+                <i class="fas fa-award"></i> Bestsellers
+            </h3>
+            <div class="card-body">
+                <div id="carouselBestsellers" class="carousel slide" data-interval="false" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto">
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Los pilares de la tierra"
+                                             src="img/book7.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>10%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Los pilares de la tierra</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Ken Follet
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Un mundo sin fín"
+                                             src="img/book8.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>20%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Un mundo sin fín</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Ken Follet
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star "></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Una columna de fuego"
+                                             src="img/book9.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>30%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Una columna de fuego</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Ken Follet
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                                <span class="star "></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="La catedral del mar"
+                                             src="img/book10.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>40%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">La catedral del mar</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Idelfonso Falcones
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Los herederos de la tierra"
+                                             src="img/book11.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>50%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Los herederos de la tierra</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Idelfonso Falcones
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                                <span class="star "></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+                    </div><!-- /.carousel-inner -->
+
+                    <!-- Controles -->
+                    <a class="carousel-control-prev xd-none" href="#carouselBestsellers" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next xd-none" href="#carouselBestsellers" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div><!-- /#carouselBestsellers.carousel.slide-->
+            </div><!-- /card-body -->
+        </section><!-- /#cardBestsellers.card.showcase-->
+
+        <!-- Categorías -->
+        <section class="card big-categories">
+            <div class="card-body">
+                <div class="big-category col-4 text-center">
+                    <a href="#" class="big-category-item">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                            <i class="fas fa-laptop-code fa-stack-1x grow"></i>
+                        </span>
+                        <h5 class="big-category-title">Programación</h5>
+                    </a>
+                </div><!-- /.big-category -->
+
+                <div class="big-category col-4 text-center">
+                    <a href="#" class="big-category-item">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                            <i class="fas fa-rocket fa-stack-1x grow"></i>
+                        </span>
+                        <h5 class="big-category-title">Ciencia ficción</h5>
+                    </a>
+                </div><!-- /.big-category -->
+
+                <div class="big-category col-4 text-center">
+                    <a href="#" class="big-category-item">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                            <i class="fas fa-heart fa-stack-1x grow"></i>
+                        </span>
+                        <h5 class="big-category-title">Novela romántica</h5>
+                    </a>
+                </div><!-- /.big-category -->
+            </div><!-- /.card-body -->
+        </section><!-- /.card.big-categories -->
+
+        <!-- Novedades -->
+        <section id="cardNovedades" class="card showcase">
+            <h3 class="card-header">
+                <i class="fas fa-certificate"></i> Novedades
+            </h3>
+            <div class="card-body">
+                <div id="carouselNovedades" class="carousel slide" data-interval="false" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto">
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="La clave Gaudí"
+                                             src="img/book12.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>10%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">La clave Gaudí</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Estaban Martín
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Match Love 2.0"
+                                             src="img/book13.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>20%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Match Love 2.0</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            T. J. Chairman
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star "></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Sin noticias de Gurb"
+                                             src="img/book14.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>30%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Sin noticias de Gurb</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Eduardo Mendoza
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Mentalidad Mamba"
+                                             src="img/book15.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>40%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Mentalidad Mamba</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Kobe Bryant
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star half-star"></span>
+                                                <span class="star "></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <a
+                                       href="#">
+                                        <img alt="Invisible"
+                                             src="img/book16.jpg">
+                                        <div class="savings-tag">
+                                            Ahorra<br>50%
+                                        </div>
+                                    </a>
+                                </div><!-- /.book-img-->
+                                <div class="book-info">
+                                    <h3 class="title">
+                                        <a href="#">Invisible</a>
+                                    </h3>
+                                    <p class="author">
+                                        <a href="#">
+                                            Eloy Moreno
+                                        </a>
+                                    </p>
+                                    <div class="rating-wrap">
+                                        <a href="#">
+                                            <div class="stars">
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star full-star"></span>
+                                                <span class="star "></span>
+                                                <span class="star "></span>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.rating-wrap -->
+
+                                    <div class="price-wrap">
+                                        <p class="price">
+                                            35,23 €
+                                            &nbsp;<span class="rrp">40,50 €</span>
+                                        </p>
+                                        <p class="price-save">
+                                            Ahorra 5,27 €</p>
+                                    </div><!-- /.price-wrap -->
+
+                                    <div class="book-item-actions">
+                                        <div class="btn-wrap">
+                                            <a href="#"
+                                               class="btn btn-sm btn-primary btn-block">
+                                                Añadir a la cesta</a>
+                                        </div>
+                                    </div><!-- /.book-item-actions -->
+                                </div><!-- /.book-info -->
+                            </div><!-- /.book-item -->
+                        </div><!-- /.carousel-item -->
+                    </div><!-- /.carousel-inner -->
+
+                    <!-- Controles -->
+                    <a class="carousel-control-prev xd-none" href="#carouselNovedades" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next xd-none" href="#carouselNovedades" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div><!-- /#carouselNovedades.carousel.slide-->
+            </div><!-- /.card-body -->
+        </section><!-- /#cardNovedades.card.showcase-->
+    </main><!-- /#main-container -->
+
+    <!-- Footer -->
+    <footer id="main-footer" class="container-fluid bg-dark">
+        <div class="footer-container container-md">
+            <div class="footer-header">
+                <img class="footer-logo" src="img/logo_small.png" alt="Logo">
+                <h4 class="footer-title">Mi librería online</h4>
+            </div><!-- /.footer-header -->
+            <div class="footer-body row">
+                <div class="footer-links-wrap col-12 col-sm-6 col-lg-3">
+                    <p class="footer-links-title">
+                        Sobre nosotros
+                    </p>
+                    <a href="#" class="footer-links-text">
+                        Quienes somos
+                    </a>
+                    <a href="#" class="footer-links-text">
+                        Nuestras librerias
+                    </a>
+                </div><!-- /.footer-links-wrap -->
+
+                <div class="footer-links-wrap col-12 col-sm-6 col-lg-3">
+                    <p class="footer-links-title">
+                        Ayuda
+                    </p>
+                    <a href="#" class="footer-links-text">
+                        Gastos de envío
+                    </a>
+                    <a href="#" class="footer-links-text">
+                        Preguntas frecuentes
+                    </a>
+                    <a href="#" class="footer-links-text">
+                        Contacta con nosotros
+                    </a>
+                </div><!-- /.footer-links-wrap -->
+
+                <div class="footer-links-wrap col-12 col-sm-6 col-lg-3">
+                    <p class="footer-links-title">
+                        Servicios
+                    </p>
+                    <a href="#" class="footer-links-text">
+                        Solicitudes
+                    </a>
+                    <a href="#" class="footer-links-text">
+                        Preventa
+                    </a>
+                    <a href="#" class="footer-links-text">
+                        Recogida en librería
+                    </a>
+                </div><!-- /.footer-links-wrap -->
+
+                <div class="footer-links-wrap col-12 col-sm-6 col-lg-3">
+                    <p class="footer-links-title">
+                        Información legal
+                    </p>
+                    <a href="#" class="footer-links-text">
+                        Política de protección de datos
+                    </a>
+                    <a href="#" class="footer-links-text">
+                        Política de cookies
+                    </a>
+                </div><!-- /.footer-links-wrap -->
+            </div><!-- /.footer-body -->
+            <div class="footer-footer">
+                <p>Copyright © 2020. Todos los derechos reservados</p>
+            </div>
+        </div><!-- /.footer-container  -->
+    </footer><!-- /#main-footer -->
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <!-- El jQuery slim de Bootstrap 4.5 NO es completo (p.e. le falta el fadeOut) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/0a45d04076.js" crossorigin="anonymous"></script>
+
+    <!-- Customm JS -->
+    <script src="js/custom.js"></script>
+    <script src="js/custom-carousel.js"></script>
+</body>
+
+</html>

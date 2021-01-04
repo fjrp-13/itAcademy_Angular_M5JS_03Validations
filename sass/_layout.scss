@@ -1,0 +1,318 @@
+* {
+    /* Border y Padding incluídos en los width y height */
+    box-sizing: border-box;
+}
+
+@mixin full-height {
+    min-height: 100%;
+}
+@mixin full-vertical-height {
+    min-height: 100vh;
+}
+@mixin highlight-color {
+    color: $default-highlight-color;
+}
+@mixin navbar-menu-item-highlight-bottom-line {
+    border-bottom: medium solid $default-highlight-color;        
+}
+
+@mixin footer-links-wrap-margin-top {
+    margin-top: 2rem;
+}
+
+html {
+    @include full-vertical-height;
+}
+body {
+    @include full-vertical-height;
+    
+    // Para posicionar bien el footer abajo
+    // https://css-tricks.com/couple-takes-sticky-footer/
+    display: flex;
+    flex-direction: column;
+    position:relative !important;
+
+    // font-family: $default-font-family;
+    color: $default-color;
+	background-image: url($bg-image);
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-dark {
+    &:hover {
+        color: $default-highlight-color;
+    }
+}
+
+/*---- SCROLLBAR ----*/
+.custom-scroll-bar {
+    &::-webkit-scrollbar {
+        width: $scrollBar-width;
+        height: $scrollBar-height;
+        background-color: $scrollBar-bg-color;
+    }
+    // Add a thumb/colorize scrollbar
+    &::-webkit-scrollbar-thumb {
+        background: $scrollBar-color;
+        border-radius: $scrollBar-border-radius;
+        // border: 2px solid transparent;
+        background-clip: content-box;
+    }
+}// custom-scroll-bar
+
+
+
+/*---- MAIN NAVBAR ----*/
+#main-navbar {
+    padding-bottom: 0.2rem;
+    // .form-control {
+    //     &:focus{
+    //         border-color: $default-highlight-color;
+    //         -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px $default-highlight-color;
+    //         box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px $default-highlight-color;
+    //       }
+    // }
+	&.bg-dark {
+        background-color: $navbar-bg-color !important;
+    }
+
+    .container-md {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    // Dropdowns navbar
+    .dropdown-menu {
+	    background-color: $navbar-dropdown-menu-bg-color;
+        .dropdown-item {
+            color: $navbar-dropdown-menu-item-color;
+            &:hover {
+	            background-color: $navbar-dropdown-menu-item-highlight-bg-color;
+                color: $navbar-dropdown-menu-item-highlight-color;
+            }
+        }
+    }
+    // Icono Shopping Cart
+    #cartLink {
+        white-space: nowrap;
+    }
+    // Badge del Icono Shopping Cart
+    .badge-cart-count {
+        position:relative;
+        top: -15px;
+        left: -15px;
+        background-color: $cart-badge-bg-color;
+        color: $cart-badge-color;
+    }
+
+    #navbar-row-1 {
+        // FlexBox 1º fila del navegador
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 100%;
+        // border:2px solid cyan;
+        // padding-top: 5px;
+        .btn-navbar-search-field {
+            background-color: $navbar-btn-bg-color;
+            color: $navbar-btn-text-color;
+            &:hover {
+                color: $navbar-highlight-color;
+            }
+        }
+        // .btn-secondary {
+        //     background-color: $navbar-btn-bg-color;
+        //     color: $navbar-btn-text-color;
+        //     &:hover {
+        //         color: $navbar-highlight-color;
+        //     }
+        // }
+
+        // Search Form del navegador en su propia fila
+        #navbar-search-form {
+            order: 1;
+            width: 100%;
+        }
+        // Alineación horizontal y vertical de los elementos del navegador
+        .navbar-row-item {
+            text-align: center;
+            align-self: center;
+        }
+
+        #navbar-row-1-links {
+            .navbar-nav {
+                display: inline-flex;
+                flex-direction: row;
+            }
+            // A los links de la 1ª fila del navegador (user/cart), le dejamos el padding que le quita Bootstrap a los nav-links
+            .nav-item {
+                .nav-link {
+                    padding-right: .5rem;
+                    padding-left: .5rem;
+                    &:hover {
+                        @include highlight-color;
+                    }
+                }
+                .fa {
+                    font-size: 1.5rem;
+                }
+            }
+
+            // Dropdowns Row 1: corregir la posición
+            .dropdown-menu {
+                position: absolute;
+            }
+        }
+        // Fontawesome del navbar
+        // .nav-item {
+        //     .nav-link {
+
+        //     }
+        // }
+    }
+
+    #navbar-row-2 {
+        // FlexBox 2º fila del navegador
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        // Alineación "flexbox" de los items de la 2ª fila del navegador
+        .nav-item {
+            flex-grow: 1;
+            text-align: center;
+            width: 100%;
+            .nav-link {
+                display: inline-block;
+                border-bottom: medium solid transparent;
+                padding-bottom: unset;
+                &:hover {
+                    @include navbar-menu-item-highlight-bottom-line;
+                }
+            }
+            &.active
+                .nav-link {
+                    @include highlight-color;
+                    @include navbar-menu-item-highlight-bottom-line;
+                }
+        }
+    }
+}// #main-navbar
+
+/*---- MAIN NAVBAR ----*/
+#main-container {
+    // Para posicionar bien el footer abajo
+    flex: 1;
+}
+
+/*---- MAIN FOOTER ----*/
+#main-footer {
+    // Para posicionar bien el footer abajo
+    flex: 0;
+
+    &.bg-dark {
+        background-color: $footer-bg-color !important;
+        color: $footer-text-color;
+    }
+    & .footer-header {
+        text-align: center;
+        padding: 1.5rem 1rem 1rem 1rem;
+        & .footer-logo {
+            margin-right:0.25rem;
+        }
+        & .footer-title {
+            color: $footer-title-color;
+            display: inline-block;
+        }
+    }
+    & .footer-body {
+        & .footer-links-wrap {
+            // padding-left: 12rem;
+            @media(min-width:map-get($breakpoints, "phone")) {
+                padding-left: 4rem;
+            }
+            @media(min-width:map-get($breakpoints, "tablet")) {
+                padding-left: 5rem;
+            }
+            @media(min-width:map-get($breakpoints, "desktop")) {   
+                padding-left: 1rem;
+            }
+            & .footer-links-title {
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+            & .footer-links-text {
+                color: $footer-text-color;
+                font-size: 0.9rem;
+                display: block;
+                white-space: nowrap;
+                &:hover {
+                    text-decoration: none;
+                    @include highlight-color;
+                }
+            }
+            &:not(:first-of-type) {
+                @include footer-links-wrap-margin-top;
+                @media(min-width:map-get($breakpoints, "phone")) {
+                    margin-top: 0;
+                }
+            }
+            // https://css-tricks.com/useful-nth-child-recipies/
+            &:nth-child(n+3) {
+                @include footer-links-wrap-margin-top;
+                @media(min-width:map-get($breakpoints, "desktop")) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    & .footer-footer {
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+        text-align: center;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media(min-width:map-get($breakpoints, "phone")) {
+	// .navbar-expand-sm .input-group-search {
+	//    /* width: 100% !important;  */
+	// }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width:map-get($breakpoints, "tablet")) {
+	// .navbar-expand-md .input-group-search {
+	//    /* width: 90% !important;  */
+	// }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width:map-get($breakpoints, "desktop")) {
+	/*---- MAIN NAVBAR ----*/
+    #main-navbar {
+        #navbar-row-1 {
+            // Mostrar la 1ª fila del navegador unida (sin el wrap)
+            flex-wrap: nowrap;
+            // Devolver el buscador en su posición según HTML (misma fila que el logo y los links "right" de la 1ª fila del navegador
+            #navbar-search-form {
+                order: 0;
+                flex-grow: 1;
+                flex-basis: auto;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media(min-width:map-get($breakpoints, "extra-large-screen")) {
+    // .navbar-expand-xl {
+    //     .input-group-search {
+    //         width: 70% !important; 
+    //     }
+	// }
+}

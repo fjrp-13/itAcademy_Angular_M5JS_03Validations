@@ -1,0 +1,89 @@
+$breakpoints: (phone: 576px, // Small devices (landscape phones, 576px and up)
+               tablet: 768px, // Medium devices (tablets, 768px and up)
+               desktop: 992px, // Large devices (desktops, 992px and up)
+               extra-large-screen: 1200px // Extra large devices (large desktops, 1200px and up)
+               ) !default;
+// $breakpoints: (phone: 640px,
+//                tablet: 768px, 
+//                desktop: 1024px) !default;
+
+// ------------- L A Y O U T (ini) -------------
+// Variables generales
+$default-font-family: 'Lato';
+$default-color: black;
+$defaul-dark-color: #121212;
+$default-highlight-color: goldenrod;
+$bg-image: '../img/background.jpg';
+
+// ScrollBar
+$scrollBar-width: 8px;
+$scrollBar-height: 8px;
+$scrollBar-bg-color: $defaul-dark-color;
+$scrollBar-color: $default-highlight-color;
+$scrollBar-border-radius: 20px;
+
+// Navbar
+$navbar-bg-color: $defaul-dark-color;
+$navbar-text-color: #898989;
+$navbar-btn-bg-color: $navbar-bg-color;
+$navbar-btn-text-color: $navbar-text-color;
+$navbar-highlight-color: $default-highlight-color;
+$navbar-dropdown-menu-bg-color: #2a2a2a;
+$navbar-dropdown-menu-item-color: #ffffff;
+$navbar-dropdown-menu-item-highlight-bg-color: #191919;
+$navbar-dropdown-menu-item-highlight-color: $default-highlight-color;
+
+// Shopping Cart Icon Badge
+$cart-badge-bg-color: #E30612;
+$cart-badge-color: #f2f2f2;
+
+// Footer
+$footer-bg-color: $defaul-dark-color;
+$footer-text-color: $navbar-text-color;
+$footer-title-color: $footer-text-color;
+
+// ------------- L A Y O U T (fin) -------------
+
+// ------------- C A R D S (ini) -------------
+$card-color: null;
+$card-bg: #ffffff;
+// Books
+$book-color: #000000;
+$book-author-color: #4d4d4d;
+$book-author-border-color: #aaaaaa;
+$price-color: #E30612; // Precio actual
+$price-rrp-color: #999999; // Precio original
+$price-saved-color: #333333; // Ahorro
+// Etiqueta de ahorro
+$savings-tag-color: #ffffff;
+$savings-tag-bg: #E30612;
+
+// Star Rating
+$star-on-color: #fed221;
+$star-off-color: #cccccc;
+$star-unicode-char: "\1f7ca";  // Unicode for Black Star: https://css-tricks.com/star-ratings/
+
+// Categorías destacadas
+$big-category-color: #000000;
+$big-category-bg: #ffffff;
+$big-category-icon-bg: goldenrod;
+
+// Carousel
+$carousel-control-color: "000"; // En formato hex de 3 cifras
+// ------------- C A R D S (fin) -------------
+
+// ------------- M O D A L S (ini) -------------
+$modal-dark-bg-color: #393939;
+$modal-dark-color: #898989;
+$modal-dark-link-color: $default-highlight-color;
+$modal-dark-header-color: #fafafa;
+$modal-dark-btn-bg-color: #121212;
+$modal-dark-btn-color: #898989;
+$modal-dark-btn-color-highlight: $default-highlight-color;
+$modal-icon-in-field-color: #121212;
+$modal-footer-bg-color: #121212;
+// ------------- M O D A L S (fin) -------------
+
+// ------------- F O R M S (ini) -------------
+$required-icon-color: #ff000e;
+// ------------- F O R M S (fin) -------------

@@ -1,0 +1,60 @@
+.modal-login {
+    width: 350px;
+    width: 22rem;
+    & p {
+        text-align: center;
+    }
+    &.modal-dialog {
+        color: $modal-dark-color;
+        & .modal-content {
+            background-color: $modal-dark-bg-color;
+            & a {
+                color: $modal-dark-link-color;
+                text-decoration: none;
+                border-bottom: 1px dotted $modal-dark-link-color;
+            }
+            & a:hover {
+                border-bottom-style: solid;
+            }
+            & .modal-header {
+                border-bottom: none;
+                color: $modal-dark-header-color;
+                & .modal-title {
+                    width: 100% !important;
+                    text-align: center;
+                }
+                & button { // icono cerrar
+                    color: $modal-dark-header-color;
+                }
+            } // .modal-header
+            & .modal-body {
+                & .btn {
+                    color: $modal-dark-btn-color;
+                    background-color: $modal-dark-btn-bg-color;
+                    &:hover {
+                        color: $modal-dark-btn-color-highlight;
+                    }
+                }
+                & .form-group {
+                    position: relative; // Para poder posicionar el icono dentro de los campos
+                    & .form-control {
+                        padding-left: 40px; // Para posicionar el icono
+                    }
+                    & i { // Posicionar el icono dentro del campo
+                        position: absolute;
+                        left: 0.75rem;
+                        top: 0.75rem;
+                        font-size: 1rem;
+                        color: $modal-icon-in-field-color;
+                    }
+                }// .form-group
+            } // .modal-body
+            & .modal-footer {
+                background-color: $modal-footer-bg-color;
+                text-align: center;
+                justify-content: center;
+                border: none;
+            }
+        } // .modal-content
+    } // .modal-login..modal-dialog
+} // .modal-login

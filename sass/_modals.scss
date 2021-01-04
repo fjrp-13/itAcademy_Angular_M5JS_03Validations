@@ -1,0 +1,167 @@
+@mixin invalid-feedbak-allways-visible {
+    // display:block;
+    // min-height: 1.2rem;
+}
+
+@mixin dark-links($selector) {
+    #{$selector} {
+        text-decoration: none;
+        border-bottom: 1px dotted; // $modal-dark-link-color;
+        &:hover {
+            border-bottom-style: solid;
+        }
+    }
+}
+
+@mixin links($selector) {
+    #{$selector} {
+        text-decoration: none;
+        border-bottom: 1px dotted; // $modal-dark-link-color;
+        & :hover {
+            border-bottom-style: solid;
+        }
+    }
+}
+
+.modal-login {
+    width: 21rem;
+    & .required-msg-info {
+        margin-bottom: 0.75rem;
+    }
+    // & .invalid-feedback {
+    //     @include invalid-feedbak-allways-visible;
+    // }
+}
+
+.modal-signup {
+    width: 23rem;
+    // & .invalid-feedback {
+    //     @include invalid-feedbak-allways-visible;
+    // }
+}
+.modal-dialog {
+    & p {
+        // text-align: center;
+    }
+    &.modal-dialog {
+        & .modal-content {
+            & a {
+                ////@include links(&);
+                // text-decoration: none;
+                // border-bottom: 1px dotted; // $modal-dark-link-color;
+                // & :hover {
+                //     border-bottom-style: solid;
+                // }
+            }
+            & .btn {
+                .btn-link {
+                    ////@include links(&);
+                }
+            }
+            & .modal-header {
+                border-bottom: none;
+                & .modal-title {
+                    width: 100% !important;
+                    text-align: center;
+                }
+                & button { // icono cerrar
+                    // color: $modal-dark-header-color;
+                }
+            } // .modal-header
+            & .modal-body {
+                & .btn {
+                    // color: $modal-dark-btn-color;
+                    // background-color: $modal-dark-btn-bg-color;
+                    &:hover {
+                        // color: $modal-dark-btn-color-highlight;
+                    }
+                }
+                & .form-group {
+                    position: relative; // Para poder posicionar el icono dentro de los campos
+                    & .form-control {
+                        &.inside-icon-left {
+                            padding-left: 2.75rem; // Para posicionar el icono
+                        }
+                    }
+                    & i.inside-icon { // Posicionar el icono dentro del campo
+                        position: absolute;
+                        left: 0.75rem;
+                        top: 0.75rem;
+                        font-size: 1rem;
+                    }
+                }// .form-group
+                & .hint-text {
+                    text-align: center;
+                }
+            } // .modal-body
+            & .modal-footer {
+                text-align: center;
+                justify-content: center;
+                border: none;
+            }
+        } // .modal-content
+    } // .modal-login..modal-dialog
+} // .modal-login
+
+// Modal Dark
+.modal-dark {
+    & .modal-dialog {
+        color: $modal-dark-color;
+        & .modal-content {
+            background-color: $modal-dark-bg-color;
+            & .modal-header {
+                color: $modal-dark-header-color;
+                & button { // icono cerrar
+                    color: $modal-dark-header-color;
+                }
+            } // .modal-header
+            & .modal-body {
+                & .btn {
+                    color: $modal-dark-btn-color;
+                    background-color: $modal-dark-btn-bg-color;
+                    &:hover {
+                        color: $modal-dark-btn-color-highlight;
+                    }
+                }
+                & .form-group {
+                    & i { // icono dentro del campo
+                        color: $modal-icon-in-field-color;
+                    }
+                }// .form-group
+            } // .modal-body
+            & .modal-footer {
+                background-color: $modal-footer-bg-color;
+            }
+        } // .modal-content
+    } // .modal-dialog
+    & .invalid-feedback {
+        color: #ff0018;
+        color: #ff000e;
+        color: #ff3c00;
+        color: #ff7b00;
+    }
+
+    & .form-control {
+        &.is-invalid {
+            border-color: #ff000e;
+            // border-width: 2px;
+            // border-color: #ff7b00;
+        }
+        &:invalid {
+            border-color: #ff000e;
+            // border-width: 2px;
+            // border-color: #ff7b00;
+        }
+    }
+    & a {
+        color: $modal-dark-link-color;
+        // border-color: $modal-dark-link-color;
+    }
+    & .btn {
+        &.btn-link {
+        color: $modal-dark-link-color;
+        // border-color: $modal-dark-link-color;
+        }
+    }
+
+} // .modal-dark
